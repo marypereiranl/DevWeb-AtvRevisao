@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <!-- Atividade Revisão - Jogo Memoria Mariana Pereira -
+         -->
+      <meta charset="UTF-8">
+      <title> - Jogo da Memoria - </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <p id="p"></p>
+      <input type="button" value="Sortear" name=btnOk onclick="numerosAleatorios();">  
+      <table>
+      <caption><b><i><u><big> - Jogo da Memoria Mariana Pereira- </big><u></i></b></caption>
+      <tr>
+         <td><img id="img1" src="imagensjogo/1.jpg" alt=""></td>
+         <td><img id="img2" src="imagensjogo/2.jpg" alt=""></td>
+         <td><img id="img3" src="imagensjogo/3.jpg" alt=""></td>
+         <td><img id="img4" src="imagensjogo/4.jpg" alt=""></td>
+         <td><img id="img5" src="imagensjogo/5.jpg" alt=""></td>
+         <td><img id="img6" src="imagensjogo/6.jpg" alt=""></td>
+      </tr>
+      <tr>
+         <td><img id="img7" src="imagensjogo/7.jpg" alt=""></td>
+         <td><img id="img8" src="imagensjogo/8.jpg" alt=""></td>
+         <td><img id="img9" src="imagensjogo/9.jpg" alt=""></td>
+         <td><img id="img10" src="imagensjogo/10.jpg" alt=""></td>
+         <td><img id="img11" src="imagensjogo/11.jpg" alt=""></td>
+         <td><img id="img12" src="imagensjogo/12.jpg" alt=""></td>
+      </tr>
+      <tr>
+         <td><img id="img13" src="imagensjogo/13.jpg" alt=""></td>
+         <td><img id="img14" src="imagensjogo/14.jpg" alt=""></td>
+         <td><img id="img15" src="imagensjogo/15.jpg" alt=""></td>
+         <td><img id="img16" src="imagensjogo/16.jpg" alt=""></td>
+         <td><img id="img17" src="imagensjogo/17.jpg" alt=""></td>
+         <td><img id="img18" src="imagensjogo/18.jpg" alt=""></td>
+      </tr>
+      <tr>
+         <td><img id="img19" src="imagensjogo/19.jpg" alt=""></td>
+         <td><img id="img20" src="imagensjogo/20.jpg" alt=""></td>
+         <td><img id="img21" src="imagensjogo/21.jpg" alt=""></td>
+         <td><img id="img22" src="imagensjogo/22.jpg" alt=""></td>
+         <td><img id="img23" src="imagensjogo/23.jpg" alt=""></td>
+         <td><img id="img24" src="imagensjogo/24.jpg" alt=""></td>
+      </tr>
+      <script type="text/javascript">
+         var sorteio = [];
+         var i = 0;
+         function numerosAleatorios(){
+         	var sorteio = [];
+         	while(sorteio.length < 24){
+         		var aleatorio = Math.floor(Math.random() * 24)+1;
+         		if(sorteio.indexOf(aleatorio) == -1){
+         			sorteio.push(aleatorio);
+         		}
+         
+         	}
+         	while (i < sorteio.length){
+         		document.getElementById("img" + (i+1)).src= "imagensjogo/" + (sorteio[i])+".jpg";
+         		i++;
+         	}
+         	sorteio = [];
+         	i=0;
+         }
+      </script>
+   </body>
+</html>
